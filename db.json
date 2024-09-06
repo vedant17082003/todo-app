@@ -1,0 +1,13 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Pravin",
+      "password": "123456789",
+      "email": "vedukasat17@gmail.com",
+      "number": "8830303978",
+      "street": "pragati hostel dehu phata alandi,maharashtra,india",
+      "city": "Alandi"
+    }
+  ]
+}
