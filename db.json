@@ -2,12 +2,30 @@
   "users": [
     {
       "id": 1,
-      "name": "Pravin",
-      "password": "123456789",
+      "name": "vedant",
+      "password": "345678",
       "email": "vedukasat17@gmail.com",
-      "number": "8830303978",
+      "number": "08830303978",
       "street": "pragati hostel dehu phata alandi,maharashtra,india",
       "city": "Alandi"
+    },
+    {
+      "id": 2,
+      "name": "",
+      "password": "",
+      "email": "",
+      "number": "",
+      "street": "",
+      "city": ""
+    },
+    {
+      "id": 3,
+      "name": "Pravin",
+      "password": "123456",
+      "email": "vedukasat117@gmail.com",
+      "number": "9156449030",
+      "street": "pragati hostel dehu phata alandi,maharashtra,india",
+      "city": "Alandi1"
     }
   ]
 }

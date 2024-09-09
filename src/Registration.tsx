@@ -1,10 +1,7 @@
 import { Button } from '@mui/material';
 import { useState } from 'react';
-import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-
-
-
 
 const Registration = () => {
     const [id, changeid] = useState<number | ''>(0);
@@ -14,7 +11,8 @@ const Registration = () => {
     const [street, streetchange] = useState<string>("");
     const [city, citychange] = useState<string>("");
     const [number, numberchange] = useState<string>("");
-    //const navigate = useNavigate();
+
+    const navigate = useNavigate();
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
@@ -33,13 +31,13 @@ const Registration = () => {
             })
             .then((data) => {
                 toast.success("Registered successfully");
+                // Navigate to user page after successful registration
+                navigate('/user');
             })
             .catch((error) => {
                 toast.error("Failed to register: " + error.message);
             });
     }
-
-
 
     return (
         <div className="flex justify-center items-center min-h-screen bg-blue-500">
@@ -97,7 +95,6 @@ const Registration = () => {
                                 type="email"
                                 value={email}
                                 onChange={e => emailchange(e.target.value)}
-
                                 placeholder="Enter the email"
                                 className="text-black p-3 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
                             />
@@ -148,7 +145,6 @@ const Registration = () => {
                         <Button variant="contained" color="primary" type="submit">
                             Create
                         </Button>
-                        <Link to={'/user'} className="btn btn-danger">Close</Link>
                     </div>
                 </form>
             </div>
