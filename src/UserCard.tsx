@@ -1,7 +1,8 @@
 import { Card, CardContent, Typography, Button } from '@mui/material';
 import { styled } from '@mui/material/styles';
+import { useNavigate } from 'react-router-dom';
 
-interface UserCardProps {
+type UserCardProps = {
     id: number;
     name: string;
     email: string;
@@ -12,9 +13,9 @@ interface UserCardProps {
 
 const CustomCard = styled(Card)(({ theme }) => ({
     border: '1px solid rgba(0, 0, 0, 0.1)',
-    borderRadius: '16px', // Rounded corners
-    width: '250px', // Square card
-    height: '120px', // Ensures the card is a square
+    borderRadius: '16px',
+    width: '250px',
+    height: '120px',
     margin: '16px 8px',
     transition: 'transform 0.3s, box-shadow 0.3s',
     '&:hover': {
@@ -23,7 +24,9 @@ const CustomCard = styled(Card)(({ theme }) => ({
     },
 }));
 
-const UserCard = ({ name }: UserCardProps) => {
+const UserCard = ({ id, name }: UserCardProps) => {
+    const navigate = useNavigate();
+
     return (
         <CustomCard className="inter-var mx-auto">
             <CardContent className="bg-gray-50 dark:bg-gray-300 dark:border-white/[0.2] p-4">
@@ -37,7 +40,12 @@ const UserCard = ({ name }: UserCardProps) => {
                 </Typography>
 
                 <div className="flex justify-center mt-4">
-                    <Button variant="contained" color="primary" fullWidth>
+                    <Button
+                        variant="contained"
+                        color="primary"
+                        fullWidth
+                        onClick={() => navigate(`/user/${id}/todos`)}
+                    >
                         TODO
                     </Button>
                 </div>

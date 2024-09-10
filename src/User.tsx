@@ -23,20 +23,17 @@ const User = () => {
                         key={user.id}
                         id={user.id}
                         name={user.name}
-                        email={user.email}
-                        number={user.number}
-                        street={user.street}
-                        city={user.city}
+
                     />
                 ))}
             </div>
 
-            {/* Single Register button after all the user cards */}
+
             <Button
                 variant="contained"
                 color="success"
                 style={{
-                    width: '250px',  // Same width as the user card
+                    width: '250px',
                     marginTop: '20px',
                     borderRadius: '16px',
                 }}
