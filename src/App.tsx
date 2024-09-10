@@ -3,7 +3,8 @@ import './App.css'
 import Home from "./Home"
 import Registration from './Registration'
 import User from './User'
-import Todos from './Todos' // Import the Todos component
+import Todos from './Todos'
+import Blogs from "./Blogs"
 import { ToastContainer } from 'react-toastify'
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <Route path="/user" element={<User />} />
 
             <Route path="/user/:id/todos" element={<Todos />} />
+            <Route path="/user/:id/blogs" element={<Blogs />} />
           </Routes>
         </BrowserRouter>
       </div>

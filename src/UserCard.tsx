@@ -48,6 +48,14 @@ const UserCard = ({ id, name }: UserCardProps) => {
                     >
                         TODO
                     </Button>
+                    <Button
+                        variant="contained"
+                        color="primary"
+                        fullWidth
+                        onClick={() => navigate(`/user/${id}/blogs`)}
+                    >
+                        Blogs
+                    </Button>
                 </div>
             </CardContent>
         </CustomCard>

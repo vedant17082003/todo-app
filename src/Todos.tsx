@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { Button, TextField } from '@mui/material';
 import { toast } from 'react-toastify';
 
-interface Todo {
+type Todo = {
     id: number;
     userId: number;
     title: string;

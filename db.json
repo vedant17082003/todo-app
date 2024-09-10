@@ -8,12 +8,30 @@
       "number": "08830303978",
       "street": "pragati hostel dehu phata alandi,maharashtra,india",
       "city": "Alandi"
+    },
+    {
+      "id": 2,
+      "name": "Vedant ",
+      "password": "1234567",
+      "email": "vedukasat17@gail.com",
+      "number": "9156449030",
+      "street": "AT  POST SURALI,Surali,Amravati",
+      "city": "Amravati"
     }
   ],
   "todos": [
     {
       "userId": 1,
       "title": "heloo",
+      "completed": false,
+      "id": 1
+    }
+  ],
+  "blogs": [
+    {
+      "blogid": 1,
+      "title": "hello",
+      "body": "hello",
       "completed": false,
       "id": 1
     }
